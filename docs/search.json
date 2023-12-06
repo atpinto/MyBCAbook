@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "RM1",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\n\n\nShow the code\n1 + 1\n\n\n[1] 2\n\n\n\n\nShow the code\nsysuse auto\nsummarize\n## . sysuse a(1978 automobile data)\n## \n## . summarize\n## \n##     Variable |        Obs        Mean    Std. dev.       Min        Max\n## -------------+---------------------------------------------------------\n##         make |          0\n##        price |         74    6165.257    2949.496       3291      15906\n##          mpg |         74     21.2973    5.785503         12         41\n##        rep78 |         69    3.405797    .9899323          1          5\n##     headroom |         74    2.993243    .8459948        1.5          5\n## -------------+---------------------------------------------------------\n##        trunk |         74    13.75676    4.277404          5         23\n##       weight |         74    3019.459    777.1936       1760       4840\n##       length |         74    187.9324    22.26634        142        233\n##         turn |         74    39.64865    4.399354         31         51\n## displacement |         74    197.2973    91.83722         79        425\n## -------------+---------------------------------------------------------\n##   gear_ratio |         74    3.014865    .4562871       2.19       3.89\n##      foreign |         74    .2972973    .4601885          0          1"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This would be a chapter for the BCA unit\nFor example, we can have R code to draw a DAG\n\n\nShow the code\nlibrary(DiagrammeR)\n\ngrViz(\"\n    digraph causal {\n    \n      # Nodes\n      node [shape = plaintext]\n      A [label = 'Age']\n      R [label = 'Retained\\n Placenta']\n      M [label = 'Metritis']\n      O [label = 'Cistic ovarian\\n disease']\n      F [label = 'Fertility']\n      \n      # Edges\n      edge [color = black,\n            arrowhead = vee]\n      rankdir = LR\n      A-&gt;F\n      A-&gt;O\n      A-&gt;R\n      R-&gt;O\n      R-&gt;M\n      M-&gt;O\n      O-&gt;F\n      M-&gt;F\n      \n      # Graph\n      graph [overlap = true, fontsize = 10]\n    }\")\n\n\n\n\n\n\nAnd also Stata, Python, Stan, Julia, …\n\n\nShow the code\nsysuse auto\nsummarize\n## . sysuse a(1978 automobile data)\n## \n## . summarize\n## \n##     Variable |        Obs        Mean    Std. dev.       Min        Max\n## -------------+---------------------------------------------------------\n##         make |          0\n##        price |         74    6165.257    2949.496       3291      15906\n##          mpg |         74     21.2973    5.785503         12         41\n##        rep78 |         69    3.405797    .9899323          1          5\n##     headroom |         74    2.993243    .8459948        1.5          5\n## -------------+---------------------------------------------------------\n##        trunk |         74    13.75676    4.277404          5         23\n##       weight |         74    3019.459    777.1936       1760       4840\n##       length |         74    187.9324    22.26634        142        233\n##         turn |         74    39.64865    4.399354         31         51\n## displacement |         74    197.2973    91.83722         79        425\n## -------------+---------------------------------------------------------\n##   gear_ratio |         74    3.014865    .4562871       2.19       3.89\n##      foreign |         74    .2972973    .4601885          0          1"
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n\nShow the code\n1 + 1\n\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  }
+]

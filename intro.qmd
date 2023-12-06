@@ -1,0 +1,51 @@
+# Introduction
+
+```{r, setup, include=FALSE}
+library(ggplot2)
+library(Statamarkdown)
+stataexe <- "/Applications/Stata/StataBE.app/Contents/MacOS/StataBE"
+knitr::opts_chunk$set(engine.path=list(stata=stataexe))
+```
+
+This would be a chapter for the BCA unit
+
+For example, we can have R code to draw a DAG
+
+```{r, collapse=TRUE}
+library(DiagrammeR)
+
+grViz("
+	digraph causal {
+	
+	  # Nodes
+	  node [shape = plaintext]
+	  A [label = 'Age']
+	  R [label = 'Retained\n Placenta']
+	  M [label = 'Metritis']
+	  O [label = 'Cistic ovarian\n disease']
+	  F [label = 'Fertility']
+	  
+	  # Edges
+	  edge [color = black,
+	        arrowhead = vee]
+	  rankdir = LR
+	  A->F
+	  A->O
+	  A->R
+	  R->O
+	  R->M
+	  M->O
+	  O->F
+	  M->F
+	  
+	  # Graph
+	  graph [overlap = true, fontsize = 10]
+	}")
+```
+
+And also Stata, Python, Stan, Julia, ...
+
+```{stata, collectcode=TRUE, collapse=TRUE }
+sysuse auto
+summarize
+```
